@@ -173,7 +173,7 @@ public class StarterFrame extends JFrame implements ActionListener {
 
         }
         else { //1st phase if failed
-            resultTextArea.setText("  Result:   FAILED \n\n  LEXICAL Analysis:   ERROR -> Unknown/Invalid lexeme found.");
+            resultTextArea.setText("  Result:   FAILED \n\n  LEXICAL Analysis:   ERROR -> Unknown / Invalid lexeme found.");
 
             resultTextArea.setBackground(new Color(255,102,102));
             codeTextArea.setEditable(true);
