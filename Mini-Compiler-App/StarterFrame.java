@@ -42,7 +42,7 @@ public class StarterFrame extends JFrame implements ActionListener {
         String welcome = """
                 Welcome to the Mini Java Compiler App!
                 
-                This compiler only accept codes from a text file containing :
+                This compiler only accept codes from a text or javax file containing :
                     1. Data types limited to: [String, int, double, char, boolean]
                     2. Valid Identifiers
                     3. Simple or basic declaration or assignment statements/expressions
@@ -148,7 +148,7 @@ public class StarterFrame extends JFrame implements ActionListener {
         resultTextArea.setText("  Result: \n\n~Result goes here~");
         resultTextArea.setBackground(Color.lightGray);
 
-        codeTextArea.setText("[Open a text file containing codes]\n\n ~Code goes here~ ");
+        codeTextArea.setText("[Open a text or java file containing codes]\n\n ~Code goes here~ ");
         codeTextArea.setEditable(false);
         codeTextArea.setCaretColor(Color.black);
 
@@ -287,17 +287,7 @@ public class StarterFrame extends JFrame implements ActionListener {
 
     //-----------------------Opening and Reading file methods-----------------------------------//
     private void openFile() {
-        JFileChooser fileChooser = new JFileChooser();
-        FileNameExtensionFilter filter = new FileNameExtensionFilter("Text files", "txt", "text");
-        fileChooser.setFileFilter(filter);
-        fileChooser.setAcceptAllFileFilterUsed(false);
-
-        // Get the root path of the class
-        String rootPath = StarterFrame.class.getProtectionDomain().getCodeSource().getLocation().getPath();
-        File rootDirectory = new File(rootPath);
-
-        // Set the current directory of the file chooser
-        fileChooser.setCurrentDirectory(rootDirectory);
+        JFileChooser fileChooser = getjFileChooser();
         int result = fileChooser.showOpenDialog(null);
 
         if (result == JFileChooser.APPROVE_OPTION) {
@@ -313,6 +303,21 @@ public class StarterFrame extends JFrame implements ActionListener {
         else {
             selectedFile = null;
         }
+    }
+
+    private JFileChooser getjFileChooser() {
+        JFileChooser fileChooser = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("Text or Java files", "txt", "text", "java");
+        fileChooser.setFileFilter(filter);
+        fileChooser.setAcceptAllFileFilterUsed(false);
+
+        // Get the root path of the class
+        String rootPath = this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
+        File rootDirectory = new File(rootPath);
+
+        // Set the current directory of the file chooser
+        fileChooser.setCurrentDirectory(rootDirectory);
+        return fileChooser;
     }
 
     private String readFileContent(File selectedFile) throws IOException {
