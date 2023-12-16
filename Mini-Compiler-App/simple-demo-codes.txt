@@ -1,0 +1,5 @@
+String !name = Clark;
+int block = CS2;
+double grade    = 1;
+char letter;
+boolean isGood = "true";

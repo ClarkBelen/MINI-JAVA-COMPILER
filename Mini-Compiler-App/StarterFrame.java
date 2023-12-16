@@ -42,7 +42,7 @@ public class StarterFrame extends JFrame implements ActionListener {
         String welcome = """
                 Welcome to the Mini Java Compiler App!
                 
-                This compiler only accept codes from a text or javax file containing :
+                This compiler only accept codes from a text or java file containing :
                     1. Data types limited to: [String, int, double, char, boolean]
                     2. Valid Identifiers
                     3. Simple or basic declaration or assignment statements/expressions
@@ -163,7 +163,7 @@ public class StarterFrame extends JFrame implements ActionListener {
         lexical = new LexicalAnalyzer(codeTextArea.getText()); //proceed to lexical analyzer
 
         if(lexical.tokenizer()){ //1st phase  if successful
-            resultTextArea.setText("  Result:   SUCCESSFUL \n\n  LEXICAL Analysis:   Valid lexemes found.");
+            resultTextArea.setText("  Result:   SUCCESSFUL \n\n  LEXICAL Analysis:   PASSED. Valid lexemes found.");
 
             resultTextArea.setBackground(new Color(102,255,102));
 
@@ -185,7 +185,7 @@ public class StarterFrame extends JFrame implements ActionListener {
     private void performSyntaxA() { // for syntax analysis button
         SyntaxAnalyzer syntax = new SyntaxAnalyzer(lexical.tokens, lexical.dtv);
         if(syntax.isSyntaxPassed()){//2nd phase if successful
-            resultTextArea.setText("  Result:   SUCCESSFUL \n\n  SYNTAX Analysis:   Valid sequence of tokens per line");
+            resultTextArea.setText("  Result:   SUCCESSFUL \n\n  SYNTAX Analysis:   PASSED. Valid sequence of tokens per line");
 
             semanticAnalysisB.setEnabled(true);
         }
@@ -202,7 +202,7 @@ public class StarterFrame extends JFrame implements ActionListener {
     private void performSemanticA() { // for semantic analysis button
         SemanticAnalyzer semantic = new SemanticAnalyzer(lexical.dtv);
         if(semantic.noError){ //3rd phase if successful
-            resultTextArea.setText("  Result:   SUCCESSFUL \n\n  SEMANTIC Analysis:   Values are valid.\n\n  Congrats! No Error at all.");
+            resultTextArea.setText("  Result:   SUCCESSFUL \n\n  SEMANTIC Analysis:   PASSED. Values are valid.\n\n  Congrats! No Error at all.");
 
             System.out.println("Congrats! It's all good.");
         }
@@ -228,7 +228,7 @@ public class StarterFrame extends JFrame implements ActionListener {
                 openFileB.setEnabled(false);
                 lexicalAnalysisB.setEnabled(true);
                 clearB.setEnabled(true);
-                resultTextArea.setText("  Result:   Successfully opened a text file.\n\n  Proceed to Compiler Phases.");
+                resultTextArea.setText("  Result:   Successfully opened a file.\n\n  Proceed to Compiler Phases.");
                 resultTextArea.setBackground(new Color(102,255,102));
             }
         }
