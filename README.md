@@ -1,7 +1,7 @@
 # MINI JAVA COMPILER APP
 The Final Project for Theory of Programming Languages Course
 
-Download and explore the capabilities of this App through the Executable JAR File recently uploaded to the releases section of this repository.
+Download and explore the capabilities of this App through the Executable JAR File that is recently uploaded to the releases section of this repository.
 
 ## Welcome Message
 This is the initial message upon opening the app, where basic information about the application includes.
