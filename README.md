@@ -23,7 +23,9 @@ This is the interface a user will encounter when an error occurs during the comp
 ![image](https://github.com/ClarkBelen/Final-Project_TOPL/assets/142368338/359427cb-8cfc-48e9-8698-9f1c273a74e8)
 
 ## Edit Code Text Area
-The user can repeatedly edit this area everytime an error occurs, and go back to first analysis phase.
+The user can repeatedly edit this area everytime an error occurs, and go back to first analysis phase. 
+
+*Note that error will also occur when it detects that there is a blank content in the code text area upon compiler phases analysis.*
 
 ![image](https://github.com/ClarkBelen/Final-Project_TOPL/assets/142368338/f2176a51-f4d1-497f-b15f-dffed67b83f9)
 
