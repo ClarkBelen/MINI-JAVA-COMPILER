@@ -1,7 +1,10 @@
 # MINI JAVA COMPILER APP
 The Final Project for Theory of Programming Languages Course
 
-Download and explore the capabilities of this App through the Executable JAR File that is recently uploaded to the releases section of this repository.
+Download and explore the capabilities of this App through the Executable JAR File that is recently uploaded to the [Releases section](https://github.com/ClarkBelen/MINI-JAVA-COMPILER/releases/tag/TOPL_Final-Project) of this repository.
+
+[![image](https://github.com/ClarkBelen/MINI-JAVA-COMPILER/assets/142368338/c4e618ed-1ce5-4576-bf97-cb94365a5bb1)](https://github.com/ClarkBelen/MINI-JAVA-COMPILER/releases/tag/TOPL_Final-Project)
+
 
 ## Welcome Message
 This is the initial message upon opening the app, where basic information about the application includes.
