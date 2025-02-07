@@ -43,6 +43,9 @@ Upon clicking the 'Clear' button, the user will be prompted with this confirmati
 ![image](https://github.com/ClarkBelen/Final-Project_TOPL/assets/142368338/2c9fbf5b-0ccb-480c-9919-8bbe7b7119ca)
 
 
-
-
+## Requirements for Running the JAR File (After downloading from this repository)
+ 1. Ensure that you have Java Development Kit (JDK) installed. You can download it from [here](https://www.java.com/en/download/).
+ 2. Check your Java installation by running the following command in your terminal/command prompt:
+    
+    `java -version`
 
